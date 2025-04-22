@@ -263,32 +263,34 @@ export default function BusinessWorkshop() {
               </div>
 
               {/* Image Section - Left side */}
-              <div className="w-1/2 relative -mt-2">
-                <div className="relative w-[450px] mx-auto">
-                  {/* Background Elements */}
-                  <div className="absolute -top-4 -left-4 w-32 h-32 bg-rose-100 rounded-full opacity-50 blur-lg animate-pulse"></div>
-                  <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-amber-100 rounded-full opacity-50 blur-lg animate-pulse"></div>
-                  
-                  <div className="relative group">
-                    <Image
-                      src="/hero.png"
-                      alt="N S Anilkumar - Insurance & Sales Expert"
-                      width={500}
-                      height={500}
-                      className="rounded-xl mx-auto transform group-hover:scale-105 transition-transform duration-300 object-contain drop-shadow-xl"
-                      priority
-                    />
-                    {/* Floating Trust Elements */}
-                    <div className="absolute -right-4 top-1/4 bg-white px-4 py-3 rounded-xl shadow-lg border border-slate-100 transform hover:scale-105 transition-transform">
-                      <div className="flex items-center gap-2">
-                        <Star className="h-5 w-5 text-amber-400" />
-                        <p className="font-semibold text-slate-700">4.96/5 Rating</p>
+              <div className="w-1/2 relative">
+                <div className="sticky top-0 pt-4">
+                  <div className="relative w-[600px] mx-auto">
+                    {/* Background Elements */}
+                    <div className="absolute -top-4 -left-4 w-40 h-40 bg-rose-100 rounded-full opacity-50 blur-lg animate-pulse"></div>
+                    <div className="absolute -bottom-4 -right-4 w-40 h-40 bg-amber-100 rounded-full opacity-50 blur-lg animate-pulse"></div>
+                    
+                    <div className="relative group">
+                      <Image
+                        src="/hero.png"
+                        alt="N S Anilkumar - Insurance & Sales Expert"
+                        width={600}
+                        height={600}
+                        className="rounded-xl mx-auto transform group-hover:scale-105 transition-transform duration-300 object-contain drop-shadow-xl"
+                        priority
+                      />
+                      {/* Floating Trust Elements */}
+                      <div className="absolute -right-4 top-1/4 bg-white px-4 py-3 rounded-xl shadow-lg border border-slate-100 transform hover:scale-105 transition-transform">
+                        <div className="flex items-center gap-2">
+                          <Star className="h-5 w-5 text-amber-400" />
+                          <p className="font-semibold text-slate-700">4.96/5 Rating</p>
+                        </div>
                       </div>
-                    </div>
-                    <div className="absolute -left-4 bottom-1/4 bg-white px-4 py-3 rounded-xl shadow-lg border border-slate-100 transform hover:scale-105 transition-transform">
-                      <div className="flex items-center gap-2">
-                        <Users className="h-5 w-5 text-rose-500" />
-                        <p className="font-semibold text-slate-700">10,000+ Happy Students</p>
+                      <div className="absolute -left-4 bottom-1/4 bg-white px-4 py-3 rounded-xl shadow-lg border border-slate-100 transform hover:scale-105 transition-transform">
+                        <div className="flex items-center gap-2">
+                          <Users className="h-5 w-5 text-rose-500" />
+                          <p className="font-semibold text-slate-700">10,000+ Happy Students</p>
+                        </div>
                       </div>
                     </div>
                   </div>
