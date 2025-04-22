@@ -360,7 +360,7 @@ export default function BusinessWorkshop() {
                 <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-amber-100 rounded-full opacity-50"></div>
                 <div className="relative z-10">
               <Image
-                    src="/meet_your.png"
+                    src="/meetyour.png"
                     alt="N S Anilkumar"
                 width={500}
                 height={500}
