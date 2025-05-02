@@ -1,84 +1,91 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useState, useEffect } from "react"
 
-export default function CountdownTimer() {
+interface CountdownTimerProps {
+  targetDate: string; // Format: "YYYY-MM-DD HH:MM:SS"
+  className?: string;
+  compact?: boolean;
+}
+
+export default function CountdownTimer({ targetDate, className = '', compact = false }: CountdownTimerProps) {
   const [timeLeft, setTimeLeft] = useState({
-    days: 2,
-    hours: 4,
-    minutes: 46,
-    seconds: 11,
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0
   })
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setTimeLeft((prev) => {
-        let { days, hours, minutes, seconds } = prev
+    const target = new Date(targetDate).getTime()
 
-        if (seconds > 0) {
-          seconds -= 1
-        } else {
-          seconds = 59
-          if (minutes > 0) {
-            minutes -= 1
-          } else {
-            minutes = 59
-            if (hours > 0) {
-              hours -= 1
-            } else {
-              hours = 23
-              if (days > 0) {
-                days -= 1
-              } else {
-                // Timer complete
-                clearInterval(timer)
-                return prev
-              }
-            }
-          }
-        }
+    const interval = setInterval(() => {
+      const now = new Date().getTime()
+      const difference = target - now
 
-        return { days, hours, minutes, seconds }
-      })
+      if (difference <= 0) {
+        clearInterval(interval)
+        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 })
+        return
+      }
+
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24))
+      const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+      const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60))
+      const seconds = Math.floor((difference % (1000 * 60)) / 1000)
+
+      setTimeLeft({ days, hours, minutes, seconds })
     }, 1000)
 
-    return () => clearInterval(timer)
-  }, [])
+    return () => clearInterval(interval)
+  }, [targetDate])
 
+  // Format numbers to always have two digits
   const formatNumber = (num: number) => {
-    return num < 10 ? `0${num}` : num
+    return num.toString().padStart(2, '0')
+  }
+
+  if (compact) {
+    return (
+      <div className={`grid grid-cols-4 gap-1 ${className}`}>
+        <div className="bg-slate-800 text-white rounded p-1 text-center">
+          <p className="text-lg font-bold">{formatNumber(timeLeft.days)}</p>
+          <p className="text-[10px]">DAYS</p>
+        </div>
+        <div className="bg-slate-800 text-white rounded p-1 text-center">
+          <p className="text-lg font-bold">{formatNumber(timeLeft.hours)}</p>
+          <p className="text-[10px]">HOURS</p>
+        </div>
+        <div className="bg-slate-800 text-white rounded p-1 text-center">
+          <p className="text-lg font-bold">{formatNumber(timeLeft.minutes)}</p>
+          <p className="text-[10px]">MINUTES</p>
+        </div>
+        <div className="bg-slate-800 text-white rounded p-1 text-center">
+          <p className="text-lg font-bold">{formatNumber(timeLeft.seconds)}</p>
+          <p className="text-[10px]">SECONDS</p>
+        </div>
+      </div>
+    )
   }
 
   return (
-    <div className="flex flex-col items-center">
-      <p className="text-rose-600 font-medium mb-2 animate-pulse">Limited Time Offer - Ending Soon!</p>
-      <div className="flex justify-center gap-4">
-        <div className="text-center">
-          <div className="bg-slate-800 text-white rounded-lg w-16 h-16 flex items-center justify-center text-2xl font-bold">
-            {formatNumber(timeLeft.days)}
-          </div>
-          <p className="text-xs mt-1 text-slate-600">Days</p>
-        </div>
-        <div className="text-center">
-          <div className="bg-slate-800 text-white rounded-lg w-16 h-16 flex items-center justify-center text-2xl font-bold">
-            {formatNumber(timeLeft.hours)}
-          </div>
-          <p className="text-xs mt-1 text-slate-600">Hours</p>
-        </div>
-        <div className="text-center">
-          <div className="bg-slate-800 text-white rounded-lg w-16 h-16 flex items-center justify-center text-2xl font-bold">
-            {formatNumber(timeLeft.minutes)}
-          </div>
-          <p className="text-xs mt-1 text-slate-600">Minutes</p>
-        </div>
-        <div className="text-center">
-          <div className="bg-slate-800 text-white rounded-lg w-16 h-16 flex items-center justify-center text-2xl font-bold">
-            {formatNumber(timeLeft.seconds)}
-          </div>
-          <p className="text-xs mt-1 text-slate-600">Seconds</p>
-        </div>
+    <div className={`grid grid-cols-4 gap-2 ${className}`}>
+      <div className="bg-slate-800 text-white rounded p-2 text-center">
+        <p className="text-2xl font-bold">{formatNumber(timeLeft.days)}</p>
+        <p className="text-xs">DAYS</p>
       </div>
-      <p className="text-sm text-slate-600 mt-2">After this, price increases to ₹1,999/-</p>
+      <div className="bg-slate-800 text-white rounded p-2 text-center">
+        <p className="text-2xl font-bold">{formatNumber(timeLeft.hours)}</p>
+        <p className="text-xs">HOURS</p>
+      </div>
+      <div className="bg-slate-800 text-white rounded p-2 text-center">
+        <p className="text-2xl font-bold">{formatNumber(timeLeft.minutes)}</p>
+        <p className="text-xs">MINUTES</p>
+      </div>
+      <div className="bg-slate-800 text-white rounded p-2 text-center">
+        <p className="text-2xl font-bold">{formatNumber(timeLeft.seconds)}</p>
+        <p className="text-xs">SECONDS</p>
+      </div>
     </div>
   )
 }

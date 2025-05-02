@@ -9,35 +9,35 @@ import Image from "next/image"
 const testimonials = [
   {
     name: "Priya Sharma",
-    title: "CEO",
-    company: "TechSolutions India",
+    title: "LIC Development Officer",
+    company: "LIC India",
     image: "/placeholder.svg?height=80&width=80",
     quote:
-      "Rajiv's workshop was a game-changer for my business. Within 3 months of implementing his strategies, we increased our revenue by 42% and I finally got time to focus on growth.",
+      "Anilkumar's workshop was a game-changer for my insurance career. Within 3 months of implementing his strategies, my team increased policy sales by 42% and I qualified for the Million Dollar Round Table.",
   },
   {
     name: "Vikram Mehta",
-    title: "Founder",
-    company: "GrowthBox Enterprises",
+    title: "Branch Manager",
+    company: "HDFC Life Insurance",
     image: "/placeholder.svg?height=80&width=80",
     quote:
-      "After 7 years of struggling with team management, Rajiv's simple systems helped me build a team that takes ownership. My business now runs smoothly even when I'm not there.",
+      "After 7 years of struggling with agent retention, Anilkumar's agency-building systems helped me develop a stable team. My branch now consistently exceeds targets even during difficult quarters.",
   },
   {
     name: "Ananya Patel",
-    title: "Director",
-    company: "Innovate Retail",
+    title: "Senior Insurance Advisor",
+    company: "Max Life Insurance",
     image: "/placeholder.svg?height=80&width=80",
     quote:
-      "The strategies I learned helped me scale from 1 to 4 stores in just 8 months. The systems approach completely transformed how I think about business growth.",
+      "The client acquisition strategies I learned from Anilkumar helped me grow from 10 to 40 policies per month in just 6 months. My renewal ratio also improved from 65% to 92%.",
   },
   {
     name: "Rahul Kapoor",
-    title: "Managing Partner",
-    company: "Kapoor & Associates",
+    title: "Agency Owner",
+    company: "SBI Life Insurance",
     image: "/placeholder.svg?height=80&width=80",
     quote:
-      "As a service business, I was always the bottleneck. After implementing Rajiv's front-line leadership strategies, my team's productivity increased by 65% and client satisfaction improved dramatically.",
+      "As an insurance agency owner, I was always struggling with team turnover. After implementing Anilkumar's frontline leadership strategies, my agent retention increased by 65% and our premium collection doubled.",
   },
 ]
 
@@ -90,7 +90,7 @@ export default function TestimonialCarousel() {
                     </div>
                     <div className="flex mb-3">
                       {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="h-4 w-4 text-amber-500 fill-amber-500" />
+                        <Star key={i} className="h-4 w-4 text-[#e85d3d] fill-[#e85d3d]" />
                       ))}
                     </div>
                     <p className="text-slate-700 italic flex-grow">"{testimonial.quote}"</p>
