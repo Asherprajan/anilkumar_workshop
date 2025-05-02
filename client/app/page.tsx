@@ -1007,156 +1007,98 @@ export default function BusinessWorkshop() {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-16 bg-slate-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-slate-900">Frequently Asked Questions</h2>
-          </div>
-          <div className="max-w-3xl mx-auto">
-            <Accordion type="single" collapsible className="w-full">
-              <AccordionItem value="item-1">
-                <AccordionTrigger>How do I attend the workshop?</AccordionTrigger>
-                <AccordionContent>
-                  The workshop will be held at Hotel Dimora, Trivandrum on May 18th 2025 from 10:00 AM to 2:00 PM. After registration, you'll receive a confirmation email with detailed instructions and location map. The venue is easily accessible by public transport and has ample parking space.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="item-2">
-                <AccordionTrigger>Is ₹5,999 the full cost?</AccordionTrigger>
-                <AccordionContent>
-                  Yes, ₹5,999 is the complete early bird price for attending the workshop. There are no hidden charges or upsells during the event. This special price (regular price ₹9,999) is offered for a limited time to make this valuable training accessible to serious insurance professionals.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="item-3">
-                <AccordionTrigger>Is it suitable for my insurance setup?</AccordionTrigger>
-                <AccordionContent>
-                  The strategies and techniques taught are 100% applicable to all insurance setups—whether you're an individual advisor, agency owner, or development officer. The principles are universal and can be adapted to your specific situation regardless of which insurance company you represent (LIC, HDFC Life, Max Life, SBI Life, etc.).
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="item-4">
-                <AccordionTrigger>Can I bring my team members?</AccordionTrigger>
-                <AccordionContent>
-                  Yes, you can bring your team members. Each person needs to register separately. We encourage bringing your team as it helps in better implementation of the strategies learned. For groups of 5 or more, please contact us directly for special group rates.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="item-5">
-                <AccordionTrigger>Will materials be shared after?</AccordionTrigger>
-                <AccordionContent>
-                  Yes, all attendees will receive digital copies of the workshop materials, including presentation slides, worksheets, and insurance sales scripts. These will be emailed to you within 24 hours after the workshop, allowing you to implement the strategies immediately.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="item-6">
-                <AccordionTrigger>What if I miss the event?</AccordionTrigger>
-                <AccordionContent>
-                  If you're unable to attend after registration, please email us at least 48 hours before the event. We can either transfer your registration to a future workshop or process a refund as per our cancellation policy.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="item-7">
-                <AccordionTrigger>How will this help my insurance practice specifically?</AccordionTrigger>
-                <AccordionContent>
-                  The workshop focuses on practical strategies for insurance professionals including: effective client prospecting techniques, policyholder retention systems, premium collection optimization, team building for insurance agencies, cross-selling strategies for multiple insurance products, and digital marketing specifically for insurance advisors.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="item-8">
-                <AccordionTrigger>I'm new to the insurance industry. Is this workshop right for me?</AccordionTrigger>
-                <AccordionContent>
-                  Absolutely! The workshop is designed for insurance professionals at all levels. New advisors will learn foundational systems to start their career strong, while experienced agents will discover advanced strategies to scale their existing practice. Many new insurance advisors have doubled their policy count within 90 days of implementing these strategies.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="item-9">
-                <AccordionTrigger>Does Anilkumar offer ongoing support after the workshop?</AccordionTrigger>
-                <AccordionContent>
-                  Yes, all participants will get access to a private WhatsApp community group for 30 days where Anilkumar personally answers implementation questions. For those needing more extensive support, a separate long-term coaching program is available (details will be shared at the workshop for interested participants only).
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
-          </div>
-        </div>
-      </section>
+      
 
       {/* Bonus Packages Section */}
-      <section className="py-20 bg-gradient-to-br from-slate-100 to-white">
+      <section className="py-12 sm:py-20 bg-gradient-to-br from-slate-100 to-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Bonuses If You Register Before Timer Hits 0</h2>
-            <div className="w-28 h-1 bg-[#e85d3d] mx-auto mb-6 rounded-full"></div>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+          <div className="text-center mb-10 sm:mb-16">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 mb-4">Bonuses If You Register Before Timer Hits 0</h2>
+            <div className="w-20 sm:w-28 h-1 bg-[#e85d3d] mx-auto mb-4 sm:mb-6 rounded-full"></div>
+            <p className="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto px-2">
               Get exclusive bonuses worth ₹70,000+ when you register today
             </p>
           </div>
           
-          <div className="flex flex-col lg:flex-row items-center justify-center gap-8 max-w-6xl mx-auto mb-12">
-            {/* Bonus Packages Display - Inspired by the image */}
+          <div className="flex flex-col lg:flex-row items-center justify-center gap-6 sm:gap-8 max-w-6xl mx-auto mb-12">
             <div className="relative w-full lg:w-3/5">
-              <div className="absolute -top-10 -left-10 w-40 h-40 bg-rose-100 rounded-full opacity-20 blur-xl"></div>
-              <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-amber-100 rounded-full opacity-20 blur-xl"></div>
+              <div className="absolute -top-10 -left-5 sm:-left-10 w-32 sm:w-40 h-32 sm:h-40 bg-rose-100 rounded-full opacity-20 blur-xl"></div>
+              <div className="absolute -bottom-10 -right-5 sm:-right-10 w-32 sm:w-40 h-32 sm:h-40 bg-amber-100 rounded-full opacity-20 blur-xl"></div>
               
               <div className="relative z-10">
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-                  {/* Bonus 1 */}
-                  <div className="bg-gradient-to-br from-slate-900 to-slate-800 text-white p-5 rounded-xl shadow-lg transform hover:scale-105 transition-all duration-300">
-                    <div className="bg-[#e85d3d] text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl font-bold mb-3 mx-auto">1</div>
-                    <h3 className="text-xl font-bold text-center mb-3 text-[#ff9d85]">Personal Financial Guidance</h3>
-                    <div className="text-center">
-                      <p className="text-slate-200 mb-2">Personalized financial planning sessions with expert advisors</p>
-                      <p className="text-xl font-bold text-[#ff9d85]">Worth ₹25,000</p>
+                <div className="grid grid-cols-1 gap-5 sm:gap-6">
+                  <div className="bg-gradient-to-br from-slate-900 to-slate-800 text-white p-4 sm:p-5 rounded-xl shadow-lg transform hover:scale-102 transition-all duration-300">
+                    <div className="flex flex-row sm:flex-col items-center sm:items-center gap-3 sm:gap-0">
+                      <div className="bg-[#e85d3d] text-white w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center text-xl sm:text-2xl font-bold sm:mb-3 sm:mx-auto">1</div>
+                      <div className="flex-1">
+                        <h3 className="text-lg sm:text-xl font-bold sm:text-center mb-1 sm:mb-3 text-[#ff9d85]">Personal Financial Guidance</h3>
+                        <div className="sm:text-center">
+                          <p className="text-sm sm:text-base text-slate-200 mb-1 sm:mb-2">Personalized financial planning sessions with expert advisors</p>
+                          <p className="text-lg sm:text-xl font-bold text-[#ff9d85]">Worth ₹25,000</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   
-                  {/* Bonus 2 */}
-                  <div className="bg-gradient-to-br from-slate-900 to-slate-800 text-white p-5 rounded-xl shadow-lg transform md:translate-y-4 hover:scale-105 transition-all duration-300">
-                    <div className="bg-[#e85d3d] text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl font-bold mb-3 mx-auto">2</div>
-                    <h3 className="text-xl font-bold text-center mb-3 text-[#ff9d85]">Mind Reprogramming Sessions</h3>
-                    <div className="text-center">
-                      <p className="text-slate-200 mb-2">66 Powerful sessions to transform your mindset for success</p>
-                      <p className="text-xl font-bold text-[#ff9d85]">Worth ₹33,000</p>
+                  <div className="bg-gradient-to-br from-slate-900 to-slate-800 text-white p-4 sm:p-5 rounded-xl shadow-lg transform hover:scale-102 transition-all duration-300">
+                    <div className="flex flex-row sm:flex-col items-center sm:items-center gap-3 sm:gap-0">
+                      <div className="bg-[#e85d3d] text-white w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center text-xl sm:text-2xl font-bold sm:mb-3 sm:mx-auto">2</div>
+                      <div className="flex-1">
+                        <h3 className="text-lg sm:text-xl font-bold sm:text-center mb-1 sm:mb-3 text-[#ff9d85]">Mind Reprogramming Sessions</h3>
+                        <div className="sm:text-center">
+                          <p className="text-sm sm:text-base text-slate-200 mb-1 sm:mb-2">66 Powerful sessions to transform your mindset for success</p>
+                          <p className="text-lg sm:text-xl font-bold text-[#ff9d85]">Worth ₹33,000</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   
-                  {/* Bonus 3 */}
-                  <div className="bg-gradient-to-br from-slate-900 to-slate-800 text-white p-5 rounded-xl shadow-lg transform md:translate-y-0 hover:scale-105 transition-all duration-300">
-                    <div className="bg-[#e85d3d] text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl font-bold mb-3 mx-auto">3</div>
-                    <h3 className="text-xl font-bold text-center mb-3 text-[#ff9d85]">Recorded Meditation Sessions</h3>
-                    <div className="text-center">
-                      <p className="text-slate-200 mb-2">Premium meditation sessions for mental clarity and focus</p>
-                      <p className="text-xl font-bold text-[#ff9d85]">Worth ₹12,000</p>
+                  <div className="bg-gradient-to-br from-slate-900 to-slate-800 text-white p-4 sm:p-5 rounded-xl shadow-lg transform hover:scale-102 transition-all duration-300">
+                    <div className="flex flex-row sm:flex-col items-center sm:items-center gap-3 sm:gap-0">
+                      <div className="bg-[#e85d3d] text-white w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center text-xl sm:text-2xl font-bold sm:mb-3 sm:mx-auto">3</div>
+                      <div className="flex-1">
+                        <h3 className="text-lg sm:text-xl font-bold sm:text-center mb-1 sm:mb-3 text-[#ff9d85]">Recorded Meditation Sessions</h3>
+                        <div className="sm:text-center">
+                          <p className="text-sm sm:text-base text-slate-200 mb-1 sm:mb-2">Premium meditation sessions for mental clarity and focus</p>
+                          <p className="text-lg sm:text-xl font-bold text-[#ff9d85]">Worth ₹12,000</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
                 
-                <div className="absolute -bottom-5 left-0 right-0 flex justify-center">
-                  <div className="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 text-center text-white py-3 px-6 rounded-full border border-slate-700 shadow-xl">
-                    <p className="text-xl font-bold">Total Value: <span className="text-[#ff9d85]">₹70,000+</span></p>
+                <div className="relative mt-6 sm:mt-0 sm:absolute sm:-bottom-5 left-0 right-0 flex justify-center">
+                  <div className="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 text-center text-white py-2 sm:py-3 px-4 sm:px-6 rounded-full border border-slate-700 shadow-xl">
+                    <p className="text-base sm:text-xl font-bold">Total Value: <span className="text-[#ff9d85]">₹70,000+</span></p>
                   </div>
                 </div>
               </div>
             </div>
             
-            {/* Right side - Countdown and CTA */}
-            <div className="w-full lg:w-2/5 bg-white p-6 sm:p-8 rounded-xl shadow-lg border border-slate-100 mt-12 lg:mt-0">
-              <div className="text-center mb-6">
-                <h3 className="text-2xl font-bold text-slate-900 mb-2">Limited Time Offer</h3>
-                <p className="text-slate-600">Register before the timer expires to claim all bonuses</p>
+            <div className="w-full lg:w-2/5 bg-white p-5 sm:p-6 md:p-8 rounded-xl shadow-lg border border-slate-100 mt-10 lg:mt-0">
+              <div className="text-center mb-4 sm:mb-6">
+                <h3 className="text-xl sm:text-2xl font-bold text-slate-900 mb-2">Limited Time Offer</h3>
+                <p className="text-sm sm:text-base text-slate-600">Register before the timer expires to claim all bonuses</p>
               </div>
               
-              <div className="mb-6">
+              <div className="mb-4 sm:mb-6">
                 <CountdownTimer targetDate="2025-05-18 10:00:00" />
               </div>
               
               <div className="text-center">
-                <div className="bg-[#fff0ed] p-4 rounded-lg mb-6">
-                  <p className="text-[#e85d3d] font-medium">
-                    You're getting all bonuses worth ₹70,000+ <br /> for just ₹5,999!
+                <div className="bg-[#fff0ed] p-3 sm:p-4 rounded-lg mb-4 sm:mb-6">
+                  <p className="text-[#e85d3d] text-sm sm:text-base font-medium">
+                    You're getting all bonuses worth ₹70,000+ <br className="hidden xs:block" /> for just ₹5,999!
                   </p>
                 </div>
                 
-                <Button size="lg" className="bg-[#e85d3d] hover:bg-[#d94c2c] w-full text-white text-lg py-6 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden group">
+                <Button size="lg" className="bg-[#e85d3d] hover:bg-[#d94c2c] w-full text-white text-base sm:text-lg py-4 sm:py-6 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden group">
                   <span className="relative z-10">REGISTER NOW AT ₹5,999 ONLY</span>
                   <div className="absolute inset-0 bg-gradient-to-r from-[#e85d3d] to-[#ff7d5d] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-70 transition-opacity duration-700 bg-[#e85d3d] blur-xl"></div>
                 </Button>
                 
-                <p className="text-sm text-slate-500 mt-4">
+                <p className="text-xs sm:text-sm text-slate-500 mt-3 sm:mt-4">
                   100% Money-Back Guarantee If You're Not Satisfied
                 </p>
               </div>
@@ -1461,6 +1403,72 @@ export default function BusinessWorkshop() {
                 </Button>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+      {/* FAQ Section */}
+      <section className="py-16 bg-slate-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-slate-900">Frequently Asked Questions</h2>
+          </div>
+          <div className="max-w-3xl mx-auto">
+            <Accordion type="single" collapsible className="w-full">
+              <AccordionItem value="item-1">
+                <AccordionTrigger>How do I attend the workshop?</AccordionTrigger>
+                <AccordionContent>
+                  The workshop will be held at Hotel Dimora, Trivandrum on May 18th 2025 from 10:00 AM to 2:00 PM. After registration, you'll receive a confirmation email with detailed instructions and location map. The venue is easily accessible by public transport and has ample parking space.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-2">
+                <AccordionTrigger>Is ₹5,999 the full cost?</AccordionTrigger>
+                <AccordionContent>
+                  Yes, ₹5,999 is the complete early bird price for attending the workshop. There are no hidden charges or upsells during the event. This special price (regular price ₹9,999) is offered for a limited time to make this valuable training accessible to serious insurance professionals.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-3">
+                <AccordionTrigger>Is it suitable for my insurance setup?</AccordionTrigger>
+                <AccordionContent>
+                  The strategies and techniques taught are 100% applicable to all insurance setups—whether you're an individual advisor, agency owner, or development officer. The principles are universal and can be adapted to your specific situation regardless of which insurance company you represent (LIC, HDFC Life, Max Life, SBI Life, etc.).
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-4">
+                <AccordionTrigger>Can I bring my team members?</AccordionTrigger>
+                <AccordionContent>
+                  Yes, you can bring your team members. Each person needs to register separately. We encourage bringing your team as it helps in better implementation of the strategies learned. For groups of 5 or more, please contact us directly for special group rates.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-5">
+                <AccordionTrigger>Will materials be shared after?</AccordionTrigger>
+                <AccordionContent>
+                  Yes, all attendees will receive digital copies of the workshop materials, including presentation slides, worksheets, and insurance sales scripts. These will be emailed to you within 24 hours after the workshop, allowing you to implement the strategies immediately.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-6">
+                <AccordionTrigger>What if I miss the event?</AccordionTrigger>
+                <AccordionContent>
+                  If you're unable to attend after registration, please email us at least 48 hours before the event. We can either transfer your registration to a future workshop or process a refund as per our cancellation policy.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-7">
+                <AccordionTrigger>How will this help my insurance practice specifically?</AccordionTrigger>
+                <AccordionContent>
+                  The workshop focuses on practical strategies for insurance professionals including: effective client prospecting techniques, policyholder retention systems, premium collection optimization, team building for insurance agencies, cross-selling strategies for multiple insurance products, and digital marketing specifically for insurance advisors.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-8">
+                <AccordionTrigger>I'm new to the insurance industry. Is this workshop right for me?</AccordionTrigger>
+                <AccordionContent>
+                  Absolutely! The workshop is designed for insurance professionals at all levels. New advisors will learn foundational systems to start their career strong, while experienced agents will discover advanced strategies to scale their existing practice. Many new insurance advisors have doubled their policy count within 90 days of implementing these strategies.
+                </AccordionContent>
+              </AccordionItem>
+              <AccordionItem value="item-9">
+                <AccordionTrigger>Does Anilkumar offer ongoing support after the workshop?</AccordionTrigger>
+                <AccordionContent>
+                  Yes, all participants will get access to a private WhatsApp community group for 30 days where Anilkumar personally answers implementation questions. For those needing more extensive support, a separate long-term coaching program is available (details will be shared at the workshop for interested participants only).
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </div>
         </div>
       </section>
