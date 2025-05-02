@@ -89,10 +89,10 @@ export default function BusinessWorkshop() {
                 </div>
               </div>
               {/* Trust Badge Overlay */}
-              <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-white px-4 py-2 rounded-full shadow-md border border-slate-100 whitespace-nowrap">
+              <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-white px-4 py-2 rounded-full shadow-md border border-slate-100 whitespace-nowrap z-20 w-auto">
                 <p className="text-xs font-medium text-slate-700 flex items-center gap-1">
-                  <Users className="h-3 w-3 text-[#e85d3d]" />
-                  <span className="relative">
+                  <Users className="h-3 w-3 text-[#e85d3d] flex-shrink-0" />
+                  <span className="relative whitespace-nowrap">
                     Trusted by <span className="text-[#e85d3d] font-semibold">10,000+</span> Insurance Leaders
                   </span>
                 </p>
@@ -209,7 +209,7 @@ export default function BusinessWorkshop() {
                   <p className="text-sm text-slate-700">Register In Next 👇 To Unlock Bonuses Worth <span className="font-bold text-[#e85d3d]">Rs 6,487</span></p>
                 </div>
                 
-                <CountdownTimer targetDate="2025-05-18 10:00:00" compact={true} />
+                <CountdownTimer targetDate="2025-05-18 10:00:00" compact={true} theme="accent" size="sm" />
                 
                 <Button className="w-full bg-[#e85d3d] hover:bg-[#d94c2c] text-white py-3 rounded-full font-semibold mt-4 shadow-md hover:shadow-lg transition-all duration-300 transform hover:translate-y-[-2px]">
                   Register Now at ₹5,999 Only
@@ -451,8 +451,8 @@ export default function BusinessWorkshop() {
                       <p className="text-slate-700 font-medium">Register In Next 👇 To Unlock Bonuses Worth <span className="font-bold text-[#e85d3d] text-lg">Rs 6,487</span></p>
                     </div>
                     
-                    <div className="grid grid-cols-4 gap-3 mb-6">
-                      <CountdownTimer targetDate="2025-05-18 10:00:00" />
+                    <div className="mb-6">
+                      <CountdownTimer targetDate="2025-05-18 10:00:00" theme="dark" size="lg" />
                     </div>
                     
                     <div className="text-center">
@@ -1082,7 +1082,12 @@ export default function BusinessWorkshop() {
               </div>
               
               <div className="mb-4 sm:mb-6">
-                <CountdownTimer targetDate="2025-05-18 10:00:00" />
+                <CountdownTimer 
+                  targetDate="2025-05-18 10:00:00" 
+                  theme="primary"
+                  size="md"
+                  className="shadow-md"
+                />
               </div>
               
               <div className="text-center">
