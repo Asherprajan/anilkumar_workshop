@@ -420,7 +420,7 @@ export default function BusinessWorkshop() {
                 </div>
 
                   {/* Countdown Timer Under Image */}
-                  <div className="bg-white rounded-lg p-6 border border-slate-200 shadow-md mt-8 max-w-[600px] mx-auto">
+                    <div className="bg-white rounded-lg p-6 border border-slate-200 shadow-md mt-8 max-w-[600px] mx-auto">
                     <div className="flex items-center justify-center gap-1 mb-4">
                       <Star className="h-5 w-5 text-[#e85d3d]" fill="currentColor" />
                       <Star className="h-5 w-5 text-[#e85d3d]" fill="currentColor" />
@@ -428,7 +428,7 @@ export default function BusinessWorkshop() {
                       <Star className="h-5 w-5 text-[#e85d3d]" fill="currentColor" />
                       <Star className="h-5 w-5 text-[#e85d3d]" fill="currentColor" />
                       <span className="text-[#e85d3d] font-medium ml-1">4.96/5</span>
-              </div>
+                    </div>
                     
                     <div className="mb-6">
                       <div className="flex items-start gap-3 p-3 bg-[#fff0ed] rounded-lg border border-[#ffcec2]">
@@ -966,19 +966,21 @@ export default function BusinessWorkshop() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-slate-900">Success Stories</h2>
+            <div className="w-20 h-1 bg-[#e85d3d] mx-auto mb-6 rounded-full"></div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {[
-              { title: "10X Increase in Qualified Leads", icon: <Users className="h-12 w-12 text-rose-600 mb-4" /> },
-              { title: "2X Growth in Commission & Income", icon: <BarChart3 className="h-12 w-12 text-rose-600 mb-4" /> },
-              { title: "Achieved Monthly & Annual Targets", icon: <Target className="h-12 w-12 text-rose-600 mb-4" /> },
-              { title: "Earned Promotions & Recognition", icon: <Award className="h-12 w-12 text-rose-600 mb-4" /> },
-              { title: "Won Bonuses & Exotic Trips", icon: <Briefcase className="h-12 w-12 text-rose-600 mb-4" /> },
-              { title: "Mastered Digital Sales & Marketing", icon: <BookOpen className="h-12 w-12 text-rose-600 mb-4" /> }
+              { title: "10X Increase in Qualified Leads", icon: <Users className="h-12 w-12 text-[#e85d3d] mb-4" /> },
+              { title: "2X Growth in Commission & Income", icon: <BarChart3 className="h-12 w-12 text-[#e85d3d] mb-4" /> },
+              { title: "Achieved Monthly & Annual Targets", icon: <Target className="h-12 w-12 text-[#e85d3d] mb-4" /> },
+              { title: "Earned Promotions & Recognition", icon: <Award className="h-12 w-12 text-[#e85d3d] mb-4" /> },
+              { title: "Won Bonuses & Exotic Trips", icon: <Briefcase className="h-12 w-12 text-[#e85d3d] mb-4" /> },
+              { title: "Mastered Digital Sales & Marketing", icon: <BookOpen className="h-12 w-12 text-[#e85d3d] mb-4" /> }
             ].map((story, index) => (
-              <Card key={index} className="text-center">
+              <Card key={index} className="text-center border-none shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden group">
+                <div className="h-1 bg-[#e85d3d]"></div>
                 <CardContent className="pt-6">
-                  <div className="flex justify-center mb-4">
+                  <div className="bg-[#fff0ed] w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
                     {story.icon}
                   </div>
                   <p className="font-medium text-slate-900">{story.title}</p>
@@ -1067,7 +1069,7 @@ export default function BusinessWorkshop() {
                   </div>
                 </div>
                 
-                <div className="relative mt-6 sm:mt-0 sm:absolute sm:-bottom-5 left-0 right-0 flex justify-center">
+                <div className="relative mt-6 sm:mt-0 sm:absolute sm:-bottom-10 left-0 right-0 flex justify-center">
                   <div className="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 text-center text-white py-2 sm:py-3 px-4 sm:px-6 rounded-full border border-slate-700 shadow-xl">
                     <p className="text-base sm:text-xl font-bold">Total Value: <span className="text-[#ff9d85]">₹70,000+</span></p>
                   </div>

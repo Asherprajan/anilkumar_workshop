@@ -38,7 +38,7 @@ export default function StickyCtaBar() {
           </div>
 
           <Button className="bg-[#e85d3d] hover:bg-[#d94c2c] h-auto py-2 sm:py-3 px-4 sm:px-6 text-sm sm:text-lg animate-button-pulse w-full sm:w-auto">
-            Register Now at ₹5,999 Only
+          <span className="relative z-10">REGISTER NOW AT ₹5,999 ONLY</span>
           </Button>
         </div>
       </div>
