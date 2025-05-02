@@ -965,27 +965,35 @@ export default function BusinessWorkshop() {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-slate-900">Success Stories</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900">Success Stories</h2>
             <div className="w-20 h-1 bg-[#e85d3d] mx-auto mb-6 rounded-full"></div>
+            <p className="text-slate-600 text-lg max-w-3xl mx-auto">
+              Real results from insurance professionals who implemented these strategies
+            </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {[
-              { title: "10X Increase in Qualified Leads", icon: <Users className="h-12 w-12 text-[#e85d3d] mb-4" /> },
-              { title: "2X Growth in Commission & Income", icon: <BarChart3 className="h-12 w-12 text-[#e85d3d] mb-4" /> },
-              { title: "Achieved Monthly & Annual Targets", icon: <Target className="h-12 w-12 text-[#e85d3d] mb-4" /> },
-              { title: "Earned Promotions & Recognition", icon: <Award className="h-12 w-12 text-[#e85d3d] mb-4" /> },
-              { title: "Won Bonuses & Exotic Trips", icon: <Briefcase className="h-12 w-12 text-[#e85d3d] mb-4" /> },
-              { title: "Mastered Digital Sales & Marketing", icon: <BookOpen className="h-12 w-12 text-[#e85d3d] mb-4" /> }
+              { title: "10X Increase in Qualified Leads", icon: <Users className="h-8 w-8 text-white" /> },
+              { title: "2X Growth in Commission & Income", icon: <BarChart3 className="h-8 w-8 text-white" /> },
+              { title: "Achieved Monthly & Annual Targets", icon: <Target className="h-8 w-8 text-white" /> },
+              { title: "Earned Promotions & Recognition", icon: <Award className="h-8 w-8 text-white" /> },
+              { title: "Won Bonuses & Exotic Trips", icon: <Briefcase className="h-8 w-8 text-white" /> },
+              { title: "Mastered Digital Sales & Marketing", icon: <BookOpen className="h-8 w-8 text-white" /> }
             ].map((story, index) => (
-              <Card key={index} className="text-center border-none shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden group">
-                <div className="h-1 bg-[#e85d3d]"></div>
-                <CardContent className="pt-6">
-                  <div className="bg-[#fff0ed] w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
-                    {story.icon}
+              <div key={index} className="bg-white rounded-xl shadow-sm overflow-hidden group hover:shadow-md transition-all duration-300 transform hover:-translate-y-1">
+                <div className="h-2 bg-[#e85d3d]"></div>
+                <div className="p-6">
+                  <div className="flex flex-col items-center">
+                    <div className="bg-gradient-to-br from-[#e85d3d] to-[#ff7d5d] w-16 h-16 rounded-full flex items-center justify-center mb-4 transform group-hover:scale-110 transition-transform duration-300 shadow-md">
+                      {story.icon}
+                    </div>
+                    <p className="font-bold text-slate-900 text-lg text-center mb-2">{story.title}</p>
+                    <Badge variant="outline" className="bg-[#fff0ed] text-[#e85d3d] border-[#ffcec2] mt-2">
+                      Verified Result
+                    </Badge>
                   </div>
-                  <p className="font-medium text-slate-900">{story.title}</p>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
             ))}
           </div>
         </div>
