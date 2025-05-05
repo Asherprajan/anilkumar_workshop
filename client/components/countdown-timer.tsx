@@ -91,38 +91,38 @@ export default function CountdownTimer({
     switch (theme) {
       case "primary":
         return {
-          container: "gap-1 sm:gap-2",
-          box: "bg-[#e85d3d] text-white rounded-md shadow-sm",
+          container: "gap-2",
+          box: "bg-[#e85d3d] text-white shadow-sm",
           digits: "font-bold text-white",
-          label: "text-white/90 font-medium"
+          label: "text-slate-600 font-medium"
         }
       case "dark":
         return {
-          container: "gap-1 sm:gap-2",
-          box: "bg-slate-800 text-white rounded-md shadow-sm",
-          digits: "font-bold text-white",
-          label: "text-slate-300 font-medium"
+          container: "gap-2",
+          box: "bg-gray-100 text-gray-900 shadow-sm",
+          digits: "font-bold text-gray-900",
+          label: "text-slate-600 font-medium"
         }
       case "light":
         return {
-          container: "gap-1 sm:gap-2",
-          box: "bg-slate-100 text-slate-800 rounded-md shadow-sm border border-slate-200",
+          container: "gap-2",
+          box: "bg-slate-100 text-slate-800 shadow-sm",
           digits: "font-bold text-slate-800",
           label: "text-slate-600 font-medium"
         }
       case "accent":
         return {
-          container: "gap-1 sm:gap-2",
-          box: "bg-[#fff0ed] text-[#e85d3d] rounded-md shadow-sm border border-[#ffcec2]",
+          container: "gap-2",
+          box: "bg-[#fff0ed] text-[#e85d3d] shadow-sm",
           digits: "font-bold text-[#e85d3d]",
-          label: "text-[#e85d3d]/80 font-medium"
+          label: "text-slate-600 font-medium"
         }
       default:
         return {
-          container: "gap-1 sm:gap-2",
-          box: "bg-slate-800 text-white rounded-md shadow-sm",
-          digits: "font-bold text-white",
-          label: "text-slate-300 font-medium"
+          container: "gap-2",
+          box: "bg-gray-100 text-gray-900 shadow-sm",
+          digits: "font-bold text-gray-900",
+          label: "text-slate-600 font-medium"
         }
     }
   }
@@ -132,21 +132,21 @@ export default function CountdownTimer({
     switch (size) {
       case "sm":
         return {
-          box: compact ? "p-1" : "p-1.5",
-          digits: compact ? "text-base" : "text-lg",
-          label: compact ? "text-[9px]" : "text-[10px]"
+          box: "w-14 h-14",
+          digits: "text-xl",
+          label: "text-xs"
         }
       case "lg":
         return {
-          box: compact ? "p-2" : "p-3",
-          digits: compact ? "text-2xl" : "text-3xl",
-          label: compact ? "text-xs" : "text-sm"
+          box: "w-20 h-20",
+          digits: "text-3xl",
+          label: "text-sm"
         }
       default: // md
         return {
-          box: compact ? "p-1.5" : "p-2",
-          digits: compact ? "text-lg" : "text-2xl",
-          label: compact ? "text-[10px]" : "text-xs"
+          box: "w-16 h-16",
+          digits: "text-2xl",
+          label: "text-xs"
         }
     }
   }
@@ -154,36 +154,41 @@ export default function CountdownTimer({
   const themeStyles = getThemeStyles()
   const sizeStyles = getSizeStyles()
 
-  // Determine number of columns
+  // Determine which units to show
   const shouldShowDays = !hideZeroDays || timeLeft.days > 0
-  const numCols = shouldShowDays ? 4 : 3
-  const gridColsClass = `grid-cols-${numCols}`
 
   return (
     <div className={cn(
-      `grid ${gridColsClass}`, 
+      "flex justify-center", 
       themeStyles.container, 
       className
     )}>
       {shouldShowDays && (
-        <div className={cn(themeStyles.box, sizeStyles.box, "text-center transition-all")}>
-          <p className={cn(themeStyles.digits, sizeStyles.digits)}>{formatNumber(timeLeft.days)}</p>
-          {showLabels && <p className={cn(themeStyles.label, sizeStyles.label)}>DAYS</p>}
+        <div className="flex flex-col items-center">
+          <div className={cn(themeStyles.box, sizeStyles.box, "flex items-center justify-center transition-all rounded-lg")}>
+            <p className={cn(themeStyles.digits, sizeStyles.digits)}>{formatNumber(timeLeft.days)}</p>
+          </div>
+          {showLabels && <p className={cn(themeStyles.label, sizeStyles.label, "mt-1 uppercase text-center whitespace-nowrap")}>DAYS</p>}
         </div>
       )}
-      <div className={cn(themeStyles.box, sizeStyles.box, "text-center transition-all")}>
-        <p className={cn(themeStyles.digits, sizeStyles.digits)}>{formatNumber(timeLeft.hours)}</p>
-        {showLabels && <p className={cn(themeStyles.label, sizeStyles.label)}>HOURS</p>}
+      <div className="flex flex-col items-center">
+        <div className={cn(themeStyles.box, sizeStyles.box, "flex items-center justify-center transition-all rounded-lg")}>
+          <p className={cn(themeStyles.digits, sizeStyles.digits)}>{formatNumber(timeLeft.hours)}</p>
+        </div>
+        {showLabels && <p className={cn(themeStyles.label, sizeStyles.label, "mt-1 uppercase text-center whitespace-nowrap")}>HOURS</p>}
       </div>
-      <div className={cn(themeStyles.box, sizeStyles.box, "text-center transition-all")}>
-        <p className={cn(themeStyles.digits, sizeStyles.digits)}>{formatNumber(timeLeft.minutes)}</p>
-        {showLabels && <p className={cn(themeStyles.label, sizeStyles.label)}>MINUTES</p>}
+      <div className="flex flex-col items-center">
+        <div className={cn(themeStyles.box, sizeStyles.box, "flex items-center justify-center transition-all rounded-lg")}>
+          <p className={cn(themeStyles.digits, sizeStyles.digits)}>{formatNumber(timeLeft.minutes)}</p>
+        </div>
+        {showLabels && <p className={cn(themeStyles.label, sizeStyles.label, "mt-1 uppercase text-center whitespace-nowrap")}>MINUTES</p>}
       </div>
-      <div className={cn(themeStyles.box, sizeStyles.box, "text-center transition-all")}>
-        <p className={cn(themeStyles.digits, sizeStyles.digits)}>{formatNumber(timeLeft.seconds)}</p>
-        {showLabels && <p className={cn(themeStyles.label, sizeStyles.label)}>SECONDS</p>}
+      <div className="flex flex-col items-center">
+        <div className={cn(themeStyles.box, sizeStyles.box, "flex items-center justify-center transition-all rounded-lg")}>
+          <p className={cn(themeStyles.digits, sizeStyles.digits)}>{formatNumber(timeLeft.seconds)}</p>
+        </div>
+        {showLabels && <p className={cn(themeStyles.label, sizeStyles.label, "mt-1 uppercase text-center whitespace-nowrap")}>SECONDS</p>}
       </div>
     </div>
   )
 }
-
