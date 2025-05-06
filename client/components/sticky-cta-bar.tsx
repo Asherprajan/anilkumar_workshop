@@ -7,6 +7,10 @@ import { AlertCircle } from "lucide-react"
 export default function StickyCtaBar() {
   const [seatsLeft, setSeatsLeft] = useState(17) // Random initial value for demo
 
+  const handleRegisterClick = () => {
+    window.location.href = 'https://rzp.io/rzp/bridge-foundation';
+  };
+  
   // Simulate decreasing seats randomly
   useEffect(() => {
     const interval = setInterval(() => {
@@ -37,7 +41,7 @@ export default function StickyCtaBar() {
             ></div>
           </div>
 
-          <Button className="bg-[#e85d3d] hover:bg-[#d94c2c] h-auto py-2 sm:py-3 px-4 sm:px-6 text-sm sm:text-lg animate-button-pulse w-full sm:w-auto">
+          <Button className="bg-[#e85d3d] hover:bg-[#d94c2c] h-auto py-2 sm:py-3 px-4 sm:px-6 text-sm sm:text-lg animate-button-pulse w-full sm:w-auto" onClick={handleRegisterClick}>
             <span className="relative z-10">REGISTER NOW AT ₹999 ONLY</span>
           </Button>
           <p className="text-xs text-slate-600 mt-2 text-center sm:text-left">Register now for just ₹999 and <span className="text-[#e85d3d] font-medium">Pay the rest later!</span></p>
