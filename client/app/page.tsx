@@ -190,7 +190,7 @@ export default function BusinessWorkshop() {
                 <Clock className="h-5 w-5 text-slate-600 flex-shrink-0" />
                 <div className="text-xs text-slate-800">
                   <p className="font-semibold">
-                    May 18th 2025 | 10:00 AM - 2:00 PM
+                    May 18th 2025 |  9:30 AM to 4:30 PM
                   </p>
                   <p>Hotel Dimora, Trivandrum</p>
                 </div>
@@ -229,7 +229,7 @@ export default function BusinessWorkshop() {
                     STARTS ON May 18th 2025
                   </h3>
                   <p className="text-slate-600 text-sm">
-                    (10:00 AM - 2:00 PM) at Hotel Dimora, Trivandrum
+                    (9:30 AM to 4:30 PM) at Hotel Dimora, Trivandrum
                   </p>
                 </div>
 
@@ -574,7 +574,7 @@ export default function BusinessWorkshop() {
                         STARTS ON May 18th 2025
                       </h3>
                       <p className="text-slate-600">
-                        (10:00 AM - 2:00 PM) at Hotel Dimora, Trivandrum
+                        ( 9:30am to 4:30pm ) at Hotel Dimora, Trivandrum
                       </p>
                     </div>
 
@@ -2192,7 +2192,7 @@ export default function BusinessWorkshop() {
                 </AccordionTrigger>
                 <AccordionContent>
                   The workshop will be held at Hotel Dimora, Trivandrum on May
-                  18th 2025 from 10:00 AM to 2:00 PM. After registration, you'll
+                  18th 2025 from 9:30 AM to 4:30 PM. After registration, you'll
                   receive a confirmation email with detailed instructions and
                   location map. The venue is easily accessible by public
                   transport and has ample parking space.
