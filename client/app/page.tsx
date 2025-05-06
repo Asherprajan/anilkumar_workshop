@@ -43,7 +43,7 @@ export default function BusinessWorkshop() {
       {/* Hero Section */}
       <section className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100 relative">
         {/* Logo - Sticky Top Left Position with Shadow */}
-        <span className="fixed top-4 left-4 z-50 drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
+        <span className=" top-4 left-4 z-50">
           <Image 
             src="/bridg_sales.png"
             alt="Bridg Sales Logo"
