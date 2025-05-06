@@ -954,7 +954,7 @@ export default function BusinessWorkshop() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-              What You Will Learn In 4 Hrs?
+              What You Will Learn In 1 Day?
             </h2>
             <div className="w-20 h-1 bg-[#e85d3d] mx-auto mb-6 rounded-full"></div>
           </div>
