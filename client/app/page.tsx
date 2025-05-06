@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import {
@@ -30,59 +32,12 @@ import {
 import CountdownTimer from "@/components/countdown-timer";
 import TestimonialCarousel from "@/components/testimonial-carousel";
 import StickyCtaBar from "@/components/sticky-cta-bar";
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title:
-    "Transform Your Insurance Career in 4 Hours | N S Anilkumar Workshop - May 18th 2025",
-  description:
-    "Join N S Anilkumar's exclusive workshop at Hotel Dimora, Trivandrum to learn proven strategies to 2X your insurance client base. Early bird price ₹5,999 only. 34+ years experience, 1 Lakh+ professionals trained.",
-  keywords:
-    "insurance workshop, insurance career growth, insurance sales training, N S Anilkumar, insurance business growth, Trivandrum workshop",
-  openGraph: {
-    title:
-      "Transform Your Insurance Career in 4 Hours | N S Anilkumar Workshop",
-    description:
-      "Join us on May 18th 2025 at Hotel Dimora, Trivandrum. Early bird price ₹5,999 only. Learn proven strategies to 2X your insurance client base. 34+ years experience, 1 Lakh+ professionals trained.",
-    images: [
-      {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "N S Anilkumar Insurance Workshop - May 18th 2025",
-      },
-    ],
-    locale: "en_IN",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title:
-      "Transform Your Insurance Career | N S Anilkumar Workshop - May 18th 2025",
-    description:
-      "Join us at Hotel Dimora, Trivandrum. Early bird price ₹5,999 only. Learn proven strategies to 2X your insurance client base. 34+ years experience.",
-    images: ["/og-image.jpg"],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
-  verification: {
-    google: "your-google-verification-code", // Replace with actual verification code
-  },
-  alternates: {
-    canonical: "https://yourdomain.com/workshop", // Replace with your actual domain
-  },
-};
 
 export default function BusinessWorkshop() {
+  const handleRegisterClick = () => {
+    window.location.href = 'https://rzp.io/rzp/bridge-foundation';
+  };
+
   return (
     <main className="min-h-screen bg-white pb-32">
       {/* Hero Section */}
@@ -345,7 +300,7 @@ export default function BusinessWorkshop() {
               <Button
                 size="lg"
                 className="w-full bg-[#e85d3d] hover:bg-[#d94c2c] text-white py-4 text-base font-semibold rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:translate-y-[-2px] animate-button-pulse"
-                onClick={() => window.location.href = 'https://rzp.io/rzp/bridge-foundation'}
+                onClick={handleRegisterClick}
               >
                 <span className="relative z-10">
                   Grab your Seat now for just ₹999
@@ -514,7 +469,7 @@ export default function BusinessWorkshop() {
                         <Button
                           size="lg"
                           className="w-full bg-[#e85d3d] hover:bg-[#d94c2c] text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all duration-300 rounded-lg font-semibold group animate-button-pulse transform hover:translate-y-[-2px]"
-                          onClick={() => window.location.href = 'https://rzp.io/rzp/bridge-foundation'}
+                          onClick={handleRegisterClick}
                         >
                           <div className="flex flex-col items-center">
                             <span className="tracking-wide group-hover:scale-105 transition-transform">
@@ -823,7 +778,7 @@ export default function BusinessWorkshop() {
                 <Button
                   size="lg"
                   className="bg-[#e85d3d] hover:bg-[#d94c2c] w-full text-white text-base sm:text-lg py-4 sm:py-6 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden group"
-                  onClick={() => window.location.href = 'https://rzp.io/rzp/bridge-foundation'}
+                  onClick={handleRegisterClick}
                 >
                   <span className="relative z-10">
                     GRAB YOUR SEAT NOW FOR JUST ₹999
@@ -1298,7 +1253,7 @@ export default function BusinessWorkshop() {
               <Button
                 size="lg"
                 className="bg-[#e85d3d] hover:bg-[#d94c2c] w-full text-white text-lg py-6 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden group"
-                onClick={() => window.location.href = 'https://rzp.io/rzp/bridge-foundation'}
+                onClick={handleRegisterClick}
               >
                 <span className="relative z-10">
                   GRAB YOUR SEAT NOW FOR JUST ₹999
@@ -1477,7 +1432,7 @@ export default function BusinessWorkshop() {
             <Button
               size="lg"
               className="w-full max-w-md mx-auto bg-[#e85d3d] hover:bg-[#d94c2c] text-white text-base md:text-lg px-4 py-3 md:py-4 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden group"
-              onClick={() => window.location.href = 'https://rzp.io/rzp/bridge-foundation'}
+              onClick={handleRegisterClick}
             >
               <span className="relative z-10">GRAB YOUR SEAT NOW FOR JUST ₹999</span>
               <div className="absolute inset-0 bg-gradient-to-r from-[#e85d3d] to-[#ff7d5d] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
