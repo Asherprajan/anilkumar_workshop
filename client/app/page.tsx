@@ -86,7 +86,18 @@ export default function BusinessWorkshop() {
   return (
     <main className="min-h-screen bg-white pb-32">
       {/* Hero Section */}
-      <section className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100">
+      <section className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100 relative">
+        {/* Logo - Sticky Top Left Position with Shadow */}
+        <span className="fixed top-4 left-4 z-50 drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
+          <Image 
+            src="/bridg_sales.png"
+            alt="Bridg Sales Logo"
+            width={120}
+            height={48}
+            className="h-auto"
+          />
+        </span>
+        
         {/* Mobile Layout - Optimized for Conversion */}
         <div className="lg:hidden px-4 pt-4 pb-20">
           <div className="container mx-auto max-w-md">
@@ -334,14 +345,15 @@ export default function BusinessWorkshop() {
               <Button
                 size="lg"
                 className="w-full bg-[#e85d3d] hover:bg-[#d94c2c] text-white py-4 text-base font-semibold rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:translate-y-[-2px] animate-button-pulse"
+                onClick={() => window.location.href = 'https://rzp.io/rzp/bridge-foundation'}
               >
                 <span className="relative z-10">
-                  Register Now at ₹5,999 Only
+                  Grab your Seat now for just ₹999
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-[#e85d3d] to-[#d94c2c] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
               </Button>
               <p className="text-center text-xs text-slate-500">
-                Be part of our elite community of 10,000+ insurance leaders
+                Register now for just ₹999 and <span className="font-semibold text-[#e85d3d]">Pay the rest later!</span>
               </p>
             </div>
           </div>
@@ -502,10 +514,11 @@ export default function BusinessWorkshop() {
                         <Button
                           size="lg"
                           className="w-full bg-[#e85d3d] hover:bg-[#d94c2c] text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all duration-300 rounded-lg font-semibold group animate-button-pulse transform hover:translate-y-[-2px]"
+                          onClick={() => window.location.href = 'https://rzp.io/rzp/bridge-foundation'}
                         >
                           <div className="flex flex-col items-center">
                             <span className="tracking-wide group-hover:scale-105 transition-transform">
-                              Register Now at ₹5,999 Only
+                              Grab your Seat now for just ₹999
                             </span>
                             <span className="text-sm opacity-90 font-medium">
                               Only 14 Seats Left!
@@ -514,8 +527,7 @@ export default function BusinessWorkshop() {
                         </Button>
                       </div>
                       <p className="text-center text-sm text-slate-500">
-                        Join thousands of top-performing insurance experts
-                        transforming their business
+                        Register now for just ₹999 and <span className="font-semibold text-[#e85d3d]">Pay the rest later!</span>
                       </p>
                     </div>
                   </div>
@@ -801,23 +813,27 @@ export default function BusinessWorkshop() {
               </div>
 
               <div className="text-center">
-                <div className="bg-[#fff0ed] p-3 sm:p-4 rounded-lg mb-4 sm:mb-6">
+                {/* <div className="bg-[#fff0ed] p-3 sm:p-4 rounded-lg mb-4 sm:mb-6">
                   <p className="text-[#e85d3d] text-sm sm:text-base font-medium">
                     You're getting all bonuses worth ₹70,000+{" "}
                     <br className="hidden xs:block" /> for just ₹5,999!
                   </p>
-                </div>
+                </div> */}
 
                 <Button
                   size="lg"
                   className="bg-[#e85d3d] hover:bg-[#d94c2c] w-full text-white text-base sm:text-lg py-4 sm:py-6 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden group"
+                  onClick={() => window.location.href = 'https://rzp.io/rzp/bridge-foundation'}
                 >
                   <span className="relative z-10">
-                    REGISTER NOW AT ₹5,999 ONLY
+                    GRAB YOUR SEAT NOW FOR JUST ₹999
                   </span>
                   <div className="absolute inset-0 bg-gradient-to-r from-[#e85d3d] to-[#ff7d5d] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-70 transition-opacity duration-700 bg-[#e85d3d] blur-xl"></div>
                 </Button>
+                <p className="text-sm text-slate-600 mt-2">
+                  Register now for just ₹999 and <span className="text-[#e85d3d] font-medium">Pay the rest later!</span>
+                </p>
 
                 <p className="text-xs sm:text-sm text-slate-500 mt-3 sm:mt-4">
                   100% Money-Back Guarantee If You're Not Satisfied
@@ -1256,9 +1272,9 @@ export default function BusinessWorkshop() {
               <div className="flex items-center justify-between">
                 <div className="flex items-baseline gap-2">
                   <span className="text-2xl font-bold text-[#ff9d85]">
-                    ₹5,999
+                    ₹999
                   </span>
-                  <span className="text-[#e85d3d] line-through">₹9,999</span>
+                  <span className="text-[#e85d3d] line-through">₹5,999</span>
                 </div>
                 <Badge
                   variant="outline"
@@ -1282,13 +1298,17 @@ export default function BusinessWorkshop() {
               <Button
                 size="lg"
                 className="bg-[#e85d3d] hover:bg-[#d94c2c] w-full text-white text-lg py-6 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden group"
+                onClick={() => window.location.href = 'https://rzp.io/rzp/bridge-foundation'}
               >
                 <span className="relative z-10">
-                  REGISTER NOW AT ₹5,999 ONLY
+                  GRAB YOUR SEAT NOW FOR JUST ₹999
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-[#e85d3d] to-[#ff7d5d] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-70 transition-opacity duration-700 bg-[#e85d3d] blur-xl"></div>
               </Button>
+              <p className="text-sm text-slate-600 mt-2">
+                Register now for just ₹999 and <span className="text-[#e85d3d] font-medium">Pay the rest later!</span>
+              </p>
               <p className="text-sm text-slate-500 mt-4">
                 100% Money-Back Guarantee If You're Not Satisfied
               </p>
@@ -1457,11 +1477,15 @@ export default function BusinessWorkshop() {
             <Button
               size="lg"
               className="w-full max-w-md mx-auto bg-[#e85d3d] hover:bg-[#d94c2c] text-white text-base md:text-lg px-4 py-3 md:py-4 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden group"
+              onClick={() => window.location.href = 'https://rzp.io/rzp/bridge-foundation'}
             >
-              <span className="relative z-10">Register Now at ₹5,999 Only</span>
+              <span className="relative z-10">GRAB YOUR SEAT NOW FOR JUST ₹999</span>
               <div className="absolute inset-0 bg-gradient-to-r from-[#e85d3d] to-[#ff7d5d] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="absolute inset-0 opacity-0 group-hover:opacity-70 transition-opacity duration-700 bg-[#e85d3d] blur-xl"></div>
             </Button>
+            <p className="text-sm text-slate-600 mt-2">
+              Register now for just ₹999 and <span className="text-[#e85d3d] font-medium">Pay the rest later!</span>
+            </p>
           </div>
         </div>
       </section>
