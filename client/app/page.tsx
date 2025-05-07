@@ -2121,7 +2121,7 @@ export default function BusinessWorkshop() {
                   ),
                   title: "Visit Us",
                   location: "Hotel Dimora, Trivandrum",
-                  details: ["Workshop Venue", "May 18th 2025, 10 AM - 2 PM"]
+                  details: ["Workshop Venue", "May 18th 2025, 9:30 AM - 4:30 PM"]
                 }
               ].map((item, index) => (
                 <div key={index} className="bg-white rounded-xl p-6 text-center shadow-sm hover:shadow-md transition-all duration-300 border border-slate-100 transform hover:translate-y-[-5px] group">
