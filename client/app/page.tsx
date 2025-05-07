@@ -241,7 +241,7 @@ export default function BusinessWorkshop() {
                 </div>
 
                 <CountdownTimer
-                  targetDate="2025-05-18 10:00:00"
+                  targetDate="2025-05-18 09:30:00"  
                   theme="dark"
                   size="md"
                   className="my-4"
@@ -438,8 +438,7 @@ export default function BusinessWorkshop() {
                         </div>
                         <div className="mt-2 text-sm text-[#e85d3d]">
                           <p className="flex items-center gap-1">
-                            <Clock className="h-4 w-4" /> May 18th 2025 | 10:00
-                            AM - 2:00 PM
+                            <Clock className="h-4 w-4" /> May 18th 2025 | 9:30 AM to 4:30 PM
                           </p>
                           <p className="flex items-center gap-1 mt-1">
                             <MapPin className="h-4 w-4" /> Hotel Dimora,
@@ -588,7 +587,7 @@ export default function BusinessWorkshop() {
                     </div>
 
                     <CountdownTimer
-                      targetDate="2025-05-18 10:00:00"
+                      targetDate="2025-05-18 09:30:00"
                       theme="dark"
                       size="lg"
                       className="mb-6"
@@ -737,7 +736,7 @@ export default function BusinessWorkshop() {
               </div>
 
               <CountdownTimer
-                targetDate="2025-05-18 10:00:00"
+                targetDate="2025-05-18 09:30:00"  
                 theme="dark"
                 size="lg" 
                 className="mb-6"
@@ -2094,8 +2093,8 @@ export default function BusinessWorkshop() {
                   ),
                   title: "Call Us",
                   link: {
-                    href: "tel:+919876543210",
-                    text: "+91 98765 43210"
+                    href: "tel:+917200085217",
+                    text: "+91 7200085217"
                   },
                   details: ["Monday - Saturday", "9:00 AM - 6:00 PM"]
                 },
