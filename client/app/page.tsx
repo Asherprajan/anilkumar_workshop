@@ -190,7 +190,7 @@ export default function BusinessWorkshop() {
                     ₹199
                   </span>
                   <span className="text-[#e85d3d] line-through text-sm">
-                    ₹499
+                    ₹2,999
                   </span>
                   <span className="text-[#e85d3d] text-xs">only</span>
                 </div>
@@ -347,7 +347,7 @@ export default function BusinessWorkshop() {
                         </p>
                       </div>
                       <Badge className="bg-[#fff0ed] text-[#e85d3d] border-[#ffcec2]">
-                        40% OFF
+                        90% OFF
                       </Badge>
                     </div>
                     <Badge className="bg-[#210A05FF] hover:bg-[#000000] text-white px-6 py-2 uppercase tracking-wide font-semibold">
@@ -444,7 +444,7 @@ export default function BusinessWorkshop() {
                             ₹199
                           </span>
                           <span className="text-[#e85d3d] line-through font-medium">
-                            ₹499
+                            ₹2,999
                           </span>
                           <span className="text-[#e85d3d] text-sm">only</span>
                         </div>
@@ -1246,13 +1246,13 @@ export default function BusinessWorkshop() {
                   <span className="text-2xl font-bold text-[#ff9d85]">
                     ₹199
                   </span>
-                  <span className="text-[#e85d3d] line-through">₹499</span>
+                  <span className="text-[#e85d3d] line-through">₹2,999</span>
                 </div>
                 <Badge
                   variant="outline"
                   className="bg-[#fff0ed] text-[#e85d3d] border-[#ffcec2]"
                 >
-                  40% Off
+                  90% Off
                 </Badge>
               </div>
             </div>
@@ -2136,9 +2136,9 @@ export default function BusinessWorkshop() {
                       <polyline points="9 22 9 12 15 12 15 22"></polyline>
                     </>
                   ),
-                  title: "Visit Us",
-                  location: "Hotel Dimora, Trivandrum",
-                  details: ["Workshop Venue", "May 18th 2025, 9:30 AM - 4:30 PM"]
+                  title: "Join Online",
+                  location: "Zoom Meeting",
+                  details: ["Online Workshop", "May 18th 2025, 9:30 AM - 4:30 PM"]
                 }
               ].map((item, index) => (
                 <div key={index} className="bg-white rounded-xl p-6 text-center shadow-sm hover:shadow-md transition-all duration-300 border border-slate-100 transform hover:translate-y-[-5px] group">
@@ -2218,7 +2218,7 @@ export default function BusinessWorkshop() {
                 <AccordionContent>
                   Yes, ₹199 is the complete early bird price for attending the online workshop. 
                   There are no hidden charges or upsells during the event. This special price 
-                  (regular price ₹499) is offered for a limited time to make this valuable 
+                  (regular price ₹2,999) is offered for a limited time to make this valuable 
                   training accessible to serious insurance professionals.
                 </AccordionContent>
               </AccordionItem>
