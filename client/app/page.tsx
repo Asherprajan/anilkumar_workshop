@@ -38,6 +38,17 @@ function whatsapp(){
 }
 
 export default function BusinessWorkshop() {
+  // Add random number generators for dynamic stats
+  const getRandomInRange = (min: number, max: number) => {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  };
+
+  // Generate random stats
+  const seatsLeft = getRandomInRange(8, 15);
+  const attendeesJoined = getRandomInRange(35, 45);
+  const progressPercent = getRandomInRange(70, 85);
+  const rating = (4.8 + Math.random() * 0.19).toFixed(2); // Random between 4.80 and 4.99
+
   const handleRegisterClick = () => {
     window.location.href = 'https://rzp.io/rzp/bridge-foundation';
   };
@@ -176,10 +187,10 @@ export default function BusinessWorkshop() {
                 </div>
                 <div className="flex items-baseline gap-2">
                   <span className="text-3xl font-bold text-[#e85d3d]">
-                    ₹5,999
+                    ₹199
                   </span>
                   <span className="text-[#e85d3d] line-through text-sm">
-                    ₹9,999
+                    ₹499
                   </span>
                   <span className="text-[#e85d3d] text-xs">only</span>
                 </div>
@@ -190,9 +201,9 @@ export default function BusinessWorkshop() {
                 <Clock className="h-5 w-5 text-slate-600 flex-shrink-0" />
                 <div className="text-xs text-slate-800">
                   <p className="font-semibold">
-                    May 18th 2025 |  9:30 AM to 4:30 PM
+                    June 22nd 2024 | 7:30 PM to 9:00 PM
                   </p>
-                  <p>Hotel Dimora, Trivandrum</p>
+                  <p>Online Zoom Meeting</p>
                 </div>
               </div>
 
@@ -220,16 +231,16 @@ export default function BusinessWorkshop() {
                     fill="currentColor"
                   />
                   <span className="text-[#e85d3d] font-medium ml-1">
-                    4.96/5
+                    {rating}/5
                   </span>
                 </div>
 
                 <div className="text-center mb-3">
                   <h3 className="font-bold text-slate-800 text-lg">
-                    STARTS ON May 18th 2025
+                    STARTS ON June 22nd 2024
                   </h3>
                   <p className="text-slate-600 text-sm">
-                    (9:30 AM to 4:30 PM) at Hotel Dimora, Trivandrum
+                    (7:30 PM to 9:00 PM) via Zoom
                   </p>
                 </div>
 
@@ -241,23 +252,24 @@ export default function BusinessWorkshop() {
                 </div>
 
                 <CountdownTimer
-                  targetDate="2025-05-18 09:30:00"  
+                  targetDate="2025-06-22 19:30:00"  
                   theme="dark"
                   size="md"
                   className="my-4"
                   showLabels={true}
+                  hideZeroDays={true}
                 />
 
                 <div className="flex justify-center gap-4 mb-6 hidden">
                   <div className="flex flex-col items-center">
                     <div className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-gray-100 rounded-lg flex items-center justify-center">
-                      <span className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900">12</span>
+                      <span className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900">{attendeesJoined}</span>
                     </div>
                     <span className="text-xs sm:text-sm mt-2 text-slate-600">DAYS</span>
                   </div>
                   <div className="flex flex-col items-center">
                     <div className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-gray-100 rounded-lg flex items-center justify-center">
-                      <span className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900">21</span>
+                      <span className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900">{seatsLeft}</span>
                     </div>
                     <span className="text-xs sm:text-sm mt-2 text-slate-600">HOURS</span>
                   </div>
@@ -297,7 +309,7 @@ export default function BusinessWorkshop() {
                 <div className="flex items-center justify-center gap-2 text-[#e85d3d]">
                   <Clock className="h-4 w-4" />
                   <p className="text-sm font-medium">
-                    Only 14 seats remaining!
+                    Only {seatsLeft} seats remaining!
                   </p>
                 </div>
               </div>
@@ -307,12 +319,12 @@ export default function BusinessWorkshop() {
                 onClick={handleRegisterClick}
               >
                 <span className="relative z-10">
-                  Grab your Seat now for just ₹999
+                  Grab your Seat now for just ₹199
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-[#e85d3d] to-[#d94c2c] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
               </Button>
               <p className="text-center text-xs text-slate-500">
-                Register now for just ₹999 and <span className="font-semibold text-[#e85d3d]">Pay the rest later!</span>
+                Register now for just ₹199 and get access to exclusive bonuses!
               </p>
             </div>
           </div>
@@ -405,7 +417,7 @@ export default function BusinessWorkshop() {
                       </div>
                       <div className="bg-slate-50 p-4 rounded-lg text-center transform hover:scale-105 transition-transform shadow-sm hover:shadow-md">
                         <p className="text-2xl font-bold text-slate-700">
-                          4.96/5
+                          {rating}/5
                         </p>
                         <p className="text-sm text-slate-600">Average Rating</p>
                       </div>
@@ -429,20 +441,19 @@ export default function BusinessWorkshop() {
                         </div>
                         <div className="flex items-baseline gap-2">
                           <span className="text-4xl font-extrabold text-[#e85d3d]">
-                            ₹5,999
+                            ₹199
                           </span>
                           <span className="text-[#e85d3d] line-through font-medium">
-                            ₹9,999
+                            ₹499
                           </span>
                           <span className="text-[#e85d3d] text-sm">only</span>
                         </div>
                         <div className="mt-2 text-sm text-[#e85d3d]">
                           <p className="flex items-center gap-1">
-                            <Clock className="h-4 w-4" /> May 18th 2025 | 9:30 AM to 4:30 PM
+                            <Clock className="h-4 w-4" /> June 22nd 2024 | 7:30 PM to 9:00 PM
                           </p>
                           <p className="flex items-center gap-1 mt-1">
-                            <MapPin className="h-4 w-4" /> Hotel Dimora,
-                            Trivandrum
+                            <MapPin className="h-4 w-4" /> Online Zoom Meeting
                           </p>
                         </div>
                       </div>
@@ -467,7 +478,10 @@ export default function BusinessWorkshop() {
                     <div className="space-y-4">
                       <div className="relative">
                         <div className="absolute -top-3 left-0 right-0 h-1.5 bg-slate-100 rounded-full overflow-hidden">
-                          <div className="h-full bg-[#e85d3d] w-3/4 animate-pulse"></div>
+                          <div 
+                            className="h-full bg-[#e85d3d] animate-pulse"
+                            style={{ width: `${progressPercent}%` }}
+                          ></div>
                         </div>
                         <Button
                           size="lg"
@@ -476,16 +490,16 @@ export default function BusinessWorkshop() {
                         >
                           <div className="flex flex-col items-center">
                             <span className="tracking-wide group-hover:scale-105 transition-transform">
-                              Grab your Seat now for just ₹999
+                              Grab your Seat now for just ₹199
                             </span>
                             <span className="text-sm opacity-90 font-medium">
-                              Only 14 Seats Left!
+                              Only {seatsLeft} Seats Left!
                             </span>
                           </div>
                         </Button>
                       </div>
                       <p className="text-center text-sm text-slate-500">
-                        Register now for just ₹999 and <span className="font-semibold text-[#e85d3d]">Pay the rest later!</span>
+                        Register now for just ₹199 and get access to exclusive bonuses!
                       </p>
                     </div>
                   </div>
@@ -520,7 +534,7 @@ export default function BusinessWorkshop() {
                           </div>
                           <p className="text-base md:text-lg font-semibold text-slate-800">
                             Trusted by{" "}
-                            <span className="text-[#e85d3d]">1 Lakh+</span>{" "}
+                            <span className="text-[#e85d3d]">{attendeesJoined} Lakh+</span>{" "}
                             Insurance Professionals
                           </p>
                           <div className="hidden md:block h-1.5 w-1.5 bg-[#e85d3d] rounded-full animate-pulse"></div>
@@ -533,7 +547,7 @@ export default function BusinessWorkshop() {
                         <div className="flex items-center gap-2">
                           <Users className="h-5 w-5 text-[#e85d3d]" />
                           <p className="font-semibold text-slate-700">
-                            10,000+ Happy Students
+                            {attendeesJoined}K+ Happy Students
                           </p>
                         </div>
                       </div>
@@ -564,16 +578,16 @@ export default function BusinessWorkshop() {
                         fill="currentColor"
                       />
                       <span className="text-[#e85d3d] font-medium ml-1">
-                        4.96/5
+                        {rating}/5
                       </span>
                     </div>
 
                     <div className="text-center mb-4">
                       <h3 className="font-bold text-slate-800 text-xl mb-1">
-                        STARTS ON May 18th 2025
+                        STARTS ON June 22nd 2024
                       </h3>
                       <p className="text-slate-600">
-                        ( 9:30am to 4:30pm ) at Hotel Dimora, Trivandrum
+                        (7:30 PM to 9:00 PM) via Zoom Online Meeting
                       </p>
                     </div>
 
@@ -587,7 +601,7 @@ export default function BusinessWorkshop() {
                     </div>
 
                     <CountdownTimer
-                      targetDate="2025-05-18 09:30:00"
+                      targetDate="2025-06-22 19:30:00"
                       theme="dark"
                       size="lg"
                       className="mb-6"
@@ -597,13 +611,13 @@ export default function BusinessWorkshop() {
                     <div className="flex justify-center gap-4 mb-6 hidden">
                       <div className="flex flex-col items-center">
                         <div className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-gray-100 rounded-lg flex items-center justify-center">
-                          <span className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900">12</span>
+                          <span className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900">{attendeesJoined}</span>
                         </div>
                         <span className="text-xs sm:text-sm mt-2 text-slate-600">DAYS</span>
                       </div>
                       <div className="flex flex-col items-center">
                         <div className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-gray-100 rounded-lg flex items-center justify-center">
-                          <span className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900">21</span>
+                          <span className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900">{seatsLeft}</span>
                         </div>
                         <span className="text-xs sm:text-sm mt-2 text-slate-600">HOURS</span>
                       </div>
@@ -736,7 +750,7 @@ export default function BusinessWorkshop() {
               </div>
 
               <CountdownTimer
-                targetDate="2025-05-18 09:30:00"  
+                targetDate="2025-06-22 19:30:00"  
                 theme="dark"
                 size="lg" 
                 className="mb-6"
@@ -746,13 +760,13 @@ export default function BusinessWorkshop() {
               <div className="flex justify-center gap-4 mb-6 hidden">
                 <div className="flex flex-col items-center">
                   <div className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-gray-100 rounded-lg flex items-center justify-center">
-                    <span className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900">12</span>
+                    <span className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900">{attendeesJoined}</span>
                   </div>
                   <span className="text-xs sm:text-sm mt-2 text-slate-600">DAYS</span>
                 </div>
                 <div className="flex flex-col items-center">
                   <div className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-gray-100 rounded-lg flex items-center justify-center">
-                    <span className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900">21</span>
+                    <span className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900">{seatsLeft}</span>
                   </div>
                   <span className="text-xs sm:text-sm mt-2 text-slate-600">HOURS</span>
                 </div>
@@ -784,13 +798,13 @@ export default function BusinessWorkshop() {
                   onClick={handleRegisterClick}
                 >
                   <span className="relative z-10">
-                    GRAB YOUR SEAT NOW FOR JUST ₹999
+                    GRAB YOUR SEAT NOW FOR JUST ₹199
                   </span>
                   <div className="absolute inset-0 bg-gradient-to-r from-[#e85d3d] to-[#ff7d5d] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-70 transition-opacity duration-700 bg-[#e85d3d] blur-xl"></div>
                 </Button>
                 <p className="text-sm text-slate-600 mt-2">
-                  Register now for just ₹999 and <span className="text-[#e85d3d] font-medium">Pay the rest later!</span>
+                  Register now for just ₹199 and get access to exclusive bonuses!
                 </p>
 
                 <p className="text-xs sm:text-sm text-slate-500 mt-3 sm:mt-4">
@@ -1230,9 +1244,9 @@ export default function BusinessWorkshop() {
               <div className="flex items-center justify-between">
                 <div className="flex items-baseline gap-2">
                   <span className="text-2xl font-bold text-[#ff9d85]">
-                    ₹999
+                    ₹199
                   </span>
-                  <span className="text-[#e85d3d] line-through">₹5,999</span>
+                  <span className="text-[#e85d3d] line-through">₹499</span>
                 </div>
                 <Badge
                   variant="outline"
@@ -1246,11 +1260,14 @@ export default function BusinessWorkshop() {
             <div className="text-center">
               <div className="mb-4 relative">
                 <div className="h-2 bg-slate-100 rounded-full">
-                  <div className="h-full bg-[#e85d3d] rounded-full w-3/4 animate-pulse"></div>
+                  <div 
+                    className="h-full bg-[#e85d3d] rounded-full animate-pulse"
+                    style={{ width: `${progressPercent}%` }}
+                  ></div>
                 </div>
                 <div className="flex justify-between text-xs text-slate-500 mt-1">
                   <span>Filling fast</span>
-                  <span>Only 14 seats left</span>
+                  <span>Only {seatsLeft} seats left</span>
                 </div>
               </div>
               <Button
@@ -1259,13 +1276,13 @@ export default function BusinessWorkshop() {
                 onClick={handleRegisterClick}
               >
                 <span className="relative z-10">
-                  GRAB YOUR SEAT NOW FOR JUST ₹999
+                  GRAB YOUR SEAT NOW FOR JUST ₹199
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-[#e85d3d] to-[#ff7d5d] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-70 transition-opacity duration-700 bg-[#e85d3d] blur-xl"></div>
               </Button>
               <p className="text-sm text-slate-600 mt-2">
-                Register now for just ₹999 and <span className="text-[#e85d3d] font-medium">Pay the rest later!</span>
+                Register now for just ₹199 and get access to exclusive bonuses!
               </p>
               <p className="text-sm text-slate-500 mt-4">
                 100% Money-Back Guarantee If You're Not Satisfied
@@ -1437,12 +1454,12 @@ export default function BusinessWorkshop() {
               className="w-full max-w-md mx-auto bg-[#e85d3d] hover:bg-[#d94c2c] text-white text-base md:text-lg px-4 py-3 md:py-4 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden group"
               onClick={handleRegisterClick}
             >
-              <span className="relative z-10">GRAB YOUR SEAT NOW FOR JUST ₹999</span>
+              <span className="relative z-10">GRAB YOUR SEAT NOW FOR JUST ₹199</span>
               <div className="absolute inset-0 bg-gradient-to-r from-[#e85d3d] to-[#ff7d5d] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="absolute inset-0 opacity-0 group-hover:opacity-70 transition-opacity duration-700 bg-[#e85d3d] blur-xl"></div>
             </Button>
             <p className="text-sm text-slate-600 mt-2">
-              Register now for just ₹999 and <span className="text-[#e85d3d] font-medium">Pay the rest later!</span>
+              Register now for just ₹199 and get access to exclusive bonuses!
             </p>
           </div>
         </div>
@@ -2190,21 +2207,19 @@ export default function BusinessWorkshop() {
                   How do I attend the workshop?
                 </AccordionTrigger>
                 <AccordionContent>
-                  The workshop will be held at Hotel Dimora, Trivandrum on May
-                  18th 2025 from 9:30 AM to 4:30 PM. After registration, you'll
-                  receive a confirmation email with detailed instructions and
-                  location map. The venue is easily accessible by public
-                  transport and has ample parking space.
+                  The workshop will be held online via Zoom on June 22nd 2024 from 7:30 PM to 9:00 PM. 
+                  After registration, you'll receive a confirmation email with the Zoom meeting link and 
+                  detailed instructions to join. Make sure you have a stable internet connection and the 
+                  Zoom application installed on your device.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-2">
-                <AccordionTrigger>Is ₹5,999 the full cost?</AccordionTrigger>
+                <AccordionTrigger>Is ₹199 the full cost?</AccordionTrigger>
                 <AccordionContent>
-                  Yes, ₹5,999 is the complete early bird price for attending the
-                  workshop. There are no hidden charges or upsells during the
-                  event. This special price (regular price ₹9,999) is offered
-                  for a limited time to make this valuable training accessible
-                  to serious insurance professionals.
+                  Yes, ₹199 is the complete early bird price for attending the online workshop. 
+                  There are no hidden charges or upsells during the event. This special price 
+                  (regular price ₹499) is offered for a limited time to make this valuable 
+                  training accessible to serious insurance professionals.
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-3">

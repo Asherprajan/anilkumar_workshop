@@ -27,7 +27,7 @@ export interface TimeLeft {
 }
 
 export default function CountdownTimer({ 
-  targetDate, 
+  targetDate = "2024-06-22 19:30:00", 
   className = '', 
   theme = "default", 
   size = "md", 
@@ -46,40 +46,38 @@ export default function CountdownTimer({
   })
 
   useEffect(() => {
-    const target = new Date(targetDate).getTime()
-
     const calculateTimeLeft = () => {
-      const now = new Date().getTime()
-      const difference = target - now
+      const targetTime = new Date(targetDate).getTime();
+      const now = new Date().getTime();
+      const difference = targetTime - now;
 
       if (difference <= 0) {
-        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0, isComplete: true })
-        if (onComplete) onComplete()
-        return true
+        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0, isComplete: true });
+        if (onComplete) onComplete();
+        return true;
       }
 
-      const days = Math.floor(difference / (1000 * 60 * 60 * 24))
-      const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
-      const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60))
-      const seconds = Math.floor((difference % (1000 * 60)) / 1000)
+      // Calculate time units
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
-      const newTimeLeft = { days, hours, minutes, seconds, isComplete: false }
-      setTimeLeft(newTimeLeft)
-      if (onChange) onChange(newTimeLeft)
-      return false
-    }
+      const newTimeLeft = { days, hours, minutes, seconds, isComplete: false };
+      setTimeLeft(newTimeLeft);
+      if (onChange) onChange(newTimeLeft);
+      return false;
+    };
 
-    // Initial calculation
-    const isComplete = calculateTimeLeft()
-    if (isComplete) return
+    // Run initial calculation
+    calculateTimeLeft();
 
-    const interval = setInterval(() => {
-      const isComplete = calculateTimeLeft()
-      if (isComplete) clearInterval(interval)
-    }, 1000)
+    // Set up interval
+    const timer = setInterval(calculateTimeLeft, 1000);
 
-    return () => clearInterval(interval)
-  }, [targetDate, onChange, onComplete])
+    // Cleanup interval on unmount
+    return () => clearInterval(timer);
+  }, [targetDate, onChange, onComplete]); // Only re-run effect if these dependencies change
 
   // Format numbers to always have two digits
   const formatNumber = (num: number) => {
