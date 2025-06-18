@@ -8,7 +8,7 @@ export default function StickyCtaBar() {
   const [seatsLeft, setSeatsLeft] = useState(17) // Random initial value for demo
 
   const handleRegisterClick = () => {
-    window.location.href = 'https://rzp.io/rzp/bridge-foundation';
+    window.location.href = 'https://rzp.io/rzp/Ib7DR6q';
   };
   
   // Simulate decreasing seats randomly

@@ -50,7 +50,7 @@ export default function BusinessWorkshop() {
   const rating = (4.8 + Math.random() * 0.19).toFixed(2); // Random between 4.80 and 4.99
 
   const handleRegisterClick = () => {
-    window.location.href = 'https://rzp.io/rzp/bridge-foundation';
+    window.location.href = 'https://rzp.io/rzp/Ib7DR6q';
   };
 
   return (
